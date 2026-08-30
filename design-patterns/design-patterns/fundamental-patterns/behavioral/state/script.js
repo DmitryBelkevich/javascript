@@ -56,7 +56,7 @@ function Context1() {
   var state = new StateA(this);
   
   this.operation = function() {
-    state.someMethod();
+    state.operation();
   };
   
   this.onNextState = function(newState) {
