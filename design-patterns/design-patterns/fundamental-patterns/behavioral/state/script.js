@@ -7,7 +7,7 @@ function State() {
 // реализация State
 
 // первое состояние
-function StateA(widjet) {
+function StateA(context) {
   var dublicate = this; // ссылка на инстанцирующийся объект (т.к. this может меняться)
   
   this.someMethod = function() {
@@ -17,7 +17,7 @@ function StateA(widjet) {
   
   this.nextState = function() {
     console.log("StateA > StateB");
-    widjet.onNextState(new StateB(widjet));
+    context.onNextState(new StateB(context));
   };
 }
 
@@ -25,7 +25,7 @@ StateA.prototype = new State();
 StateA.prototype.constructor = StateA;
 
 // второе состояние
-function StateB(widjet) {
+function StateB(context) {
   var dublicate = this;
   
   this.someMethod = function() {
@@ -35,7 +35,7 @@ function StateB(widjet) {
   
   this.nextState = function() {
     console.log("StateB > StateA");
-    widjet.onNextState(new StateA(widjet));
+    context.onNextState(new StateA(context));
   };
 }
 
@@ -43,16 +43,16 @@ StateB.prototype = new State();
 StateB.prototype.constructor = StateB;
 
 // Context
-// "интерфейс" Widget
+// "интерфейс" Context
 
-function Widget() {
+function Context() {
   this.operation = function() {};
   this.onNextState = function(state) {};
 }
 
-// реализация Widget
+// реализация Context
 
-function Widget1() {
+function Context1() {
   var state = new StateA(this);
   
   this.operation = function() {
@@ -64,14 +64,14 @@ function Widget1() {
   };
 }
 
-Widget1.prototype = new Widget();
-Widget1.prototype.constructor = Widget1;
+Context1.prototype = new Context();
+Context1.prototype.constructor = Context1;
 
 // использование
 
-var widget = new Widget1();
+var context = new Context1();
 
-widget.operation(); // StateA.operation
+context.operation(); // StateA.operation
 // StateA > StateB
-widget.operation(); // StateB.operation
+context.operation(); // StateB.operation
 // StateB > StateA
