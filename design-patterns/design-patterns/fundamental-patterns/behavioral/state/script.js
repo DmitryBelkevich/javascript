@@ -11,12 +11,12 @@ function StateA(widjet) {
   var dublicate = this; // ссылка на инстанцирующийся объект (т.к. this может меняться)
   
   this.someMethod = function() {
-    alert("StateA.someMethod");
+    console.log("StateA.someMethod");
     dublicate.nextState();
   };
   
   this.nextState = function() {
-    alert("StateA > StateB");
+    console.log("StateA > StateB");
     widjet.onNextState(new StateB(widjet));
   };
 }
@@ -29,12 +29,12 @@ function StateB(widjet) {
   var dublicate = this;
   
   this.someMethod = function() {
-    alert("StateB.someMethod");
+    console.log("StateB.someMethod");
     dublicate.nextState();
   };
   
   this.nextState = function() {
-    alert("StateB > StateA");
+    console.log("StateB > StateA");
     widjet.onNextState(new StateA(widjet));
   };
 }
