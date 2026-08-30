@@ -10,7 +10,7 @@ function State() {
 function StateA(context) {
   var dublicate = this; // ссылка на инстанцирующийся объект (т.к. this может меняться)
   
-  this.someMethod = function() {
+  this.operation = function() {
     console.log("StateA.operation");
     dublicate.nextState();
   };
@@ -28,7 +28,7 @@ StateA.prototype.constructor = StateA;
 function StateB(context) {
   var dublicate = this;
   
-  this.someMethod = function() {
+  this.operation = function() {
     console.log("StateB.operation");
     dublicate.nextState();
   };
