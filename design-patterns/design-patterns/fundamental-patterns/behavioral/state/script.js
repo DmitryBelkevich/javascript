@@ -1,6 +1,6 @@
 // State
 function State() {
-  this.someMethod = function() {};
+  this.operation = function() {};
   this.nextState = function() {};
 }
 
@@ -11,7 +11,7 @@ function StateA(widjet) {
   var dublicate = this; // ссылка на инстанцирующийся объект (т.к. this может меняться)
   
   this.someMethod = function() {
-    console.log("StateA.someMethod");
+    console.log("StateA.operation");
     dublicate.nextState();
   };
   
@@ -29,7 +29,7 @@ function StateB(widjet) {
   var dublicate = this;
   
   this.someMethod = function() {
-    console.log("StateB.someMethod");
+    console.log("StateB.operation");
     dublicate.nextState();
   };
   
@@ -46,7 +46,7 @@ StateB.prototype.constructor = StateB;
 // "интерфейс" Widget
 
 function Widget() {
-  this.someMethod = function() {};
+  this.operation = function() {};
   this.onNextState = function(state) {};
 }
 
@@ -55,7 +55,7 @@ function Widget() {
 function Widget1() {
   var state = new StateA(this);
   
-  this.someMethod = function() {
+  this.operation = function() {
     state.someMethod();
   };
   
@@ -71,7 +71,7 @@ Widget1.prototype.constructor = Widget1;
 
 var widget = new Widget1();
 
-widget.someMethod(); // StateA.someMethod
+widget.operation(); // StateA.operation
 // StateA > StateB
-widget.someMethod(); // StateB.someMethod
+widget.operation(); // StateB.operation
 // StateB > StateA
