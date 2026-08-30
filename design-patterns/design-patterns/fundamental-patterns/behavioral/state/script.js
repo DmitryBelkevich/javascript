@@ -42,6 +42,7 @@ function StateB(widjet) {
 StateB.prototype = new State();
 StateB.prototype.constructor = StateB;
 
+// Context
 // "интерфейс" Widget
 
 function Widget() {
