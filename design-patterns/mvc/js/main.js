@@ -1,4 +1,4 @@
-import Controller from 'mvc/Controller.js';
+import Controller from './mvc/Controller.js';
 
 function main() {
   const controller = new Controller();
