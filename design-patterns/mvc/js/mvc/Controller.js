@@ -22,11 +22,11 @@ export default class Controller {
 
   handler1 = () => {
     this.model.value--;
-    console.log(this.model);
+    this.view.setValue(this.model.value);
   }
 
   handler2 = () => {
     this.model.value++;
-    console.log(this.model);
+    this.view.setValue(this.model.value);
   }
 }
