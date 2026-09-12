@@ -31,7 +31,7 @@ export default class Model {
     this.handler(this.#value);
   }
 
-  // *** binding: model-controller ***
+  // *** binding: model -> controller ***
 
   bindOnStateChange(handler) {
     this.handler = handler;
