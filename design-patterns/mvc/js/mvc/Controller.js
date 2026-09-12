@@ -34,7 +34,6 @@ export default class Controller {
 
   // view
   stateChange = (value) => {
-    console.log(value);
     this.view.setValue(value);
   }
 }
