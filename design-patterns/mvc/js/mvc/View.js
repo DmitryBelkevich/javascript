@@ -1,7 +1,10 @@
 export default class View {
   constructor() {
     this.container = document.getElementById('container');
-    
-    console.log(this);
+
+    this.value = document.createElement('div');
+
+    // fill container
+    this.container.append(this.value);
   }
 }
