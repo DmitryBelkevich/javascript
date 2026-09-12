@@ -21,12 +21,12 @@ export default class Controller {
   // *** handlers ***
 
   handler1 = () => {
-    this.model.value--;
+    this.model.decrement();
     this.view.setValue(this.model.value);
   }
 
   handler2 = () => {
-    this.model.value++;
+    this.model.increment();
     this.view.setValue(this.model.value);
   }
 }
