@@ -21,12 +21,12 @@ export default class Controller {
   // *** handlers ***
 
   handler1 = () => {
-    this.model.#value--;
+    this.model.value--;
     console.log(this.model);
   }
 
   handler2 = () => {
-    this.model.#value++;
+    this.model.value++;
     console.log(this.model);
   }
 }
