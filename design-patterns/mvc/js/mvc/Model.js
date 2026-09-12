@@ -12,4 +12,12 @@ export default class Model {
   get value() {
     return this.#value;
   }
+
+  decrement() {
+    this.#value--;
+  }
+  
+  increment() {
+    this.#value++;
+  }
 }
