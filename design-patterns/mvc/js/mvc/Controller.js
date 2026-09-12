@@ -14,7 +14,7 @@ export default class Controller {
     this.view.bindDecrementButton(this.decrement);
     this.view.bindIncrementButton(this.increment);
 
-    // render
+    // *** render ***
     this.view.setValue(this.model.value);
   }
 
