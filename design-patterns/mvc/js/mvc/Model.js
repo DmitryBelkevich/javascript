@@ -30,6 +30,6 @@ export default class Model {
   // *** binding: model-controller ***
 
   bindOnStateChange(handler) {
-    handler();
+    this.handler = handler;
   }
 }
