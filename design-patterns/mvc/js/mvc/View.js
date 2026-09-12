@@ -21,13 +21,13 @@ export default class View {
 
   // *** binding view-controller ***
 
-  bindButton1(handler) {
+  bindDecrementButton(handler) {
     this.button_decrement.addEventListener("click", () => {
       handler();
     });
   }
 
-  bindButton2(handler) {
+  bindIncrementButton(handler) {
     this.button_increment.addEventListener("click", () => {
       handler();
     });
