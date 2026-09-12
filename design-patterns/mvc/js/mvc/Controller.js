@@ -10,11 +10,12 @@ export default class Controller {
 
     // *** binding controller-view ***
 
-    // bind: view -> model
+    // binding: view -> model
     this.view.bindDecrementButton(this.decrement);
     this.view.bindIncrementButton(this.increment);
 
-    // bind: model -> view
+    // binding: model -> view
+    this.model.bindOnStateChange(this.stateChange);
 
     // *** render ***
     this.view.setValue(this.model.value);
@@ -22,6 +23,7 @@ export default class Controller {
 
   // *** handlers ***
 
+  // view
   decrement = () => {
     this.model.decrement();
     this.view.setValue(this.model.value);
@@ -30,5 +32,10 @@ export default class Controller {
   increment = () => {
     this.model.increment();
     this.view.setValue(this.model.value);
+  }
+
+  // model
+  stateChange = () => {
+    console.log("Hello World");
   }
 }
