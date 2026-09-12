@@ -3,7 +3,13 @@ export default class Model {
   
   constructor() {
     this.#value = 0;
+  }
 
-    console.log(this);
+  set value(value) {
+    this.#value = value;
+  }
+  
+  get value() {
+    return this.#value;
   }
 }
