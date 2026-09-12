@@ -19,7 +19,7 @@ export default class View {
     this.value.textContent = value;
   }
 
-  // *** binding view-controller ***
+  // *** binding: view-controller ***
 
   bindDecrementButton(handler) {
     this.decrement_button.addEventListener("click", () => {
