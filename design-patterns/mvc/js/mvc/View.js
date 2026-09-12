@@ -1,7 +1,7 @@
 export default class View {
   constructor() {
     // components
-    this.value = document.createElement('div');
+    this.value_e = document.createElement('div');
     
     this.button1 = document.createElement('button');
     this.button1.textContent = "-";
@@ -16,7 +16,7 @@ export default class View {
   // *** render ***
 
   setValue(value) {
-    this.value.textContent = value;
+    this.value_e.textContent = value;
   }
 
   // *** binding view-controller ***
