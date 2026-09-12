@@ -1,6 +1,6 @@
 export default class View {
   constructor() {
-    this.value_e = document.createElement('div');
+    this.value = document.createElement('div');
     
     this.button1 = document.createElement('button');
     this.button1.textContent = "-";
@@ -10,5 +10,9 @@ export default class View {
     
     // fill container
     document.body.append(this.value_e, this.button1, this.button2);
+  }
+
+  setValue(value) {
+    this.value.textContent = value;
   }
 }
