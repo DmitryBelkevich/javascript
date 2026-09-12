@@ -19,7 +19,7 @@ export default class Model {
     else
       this.#value--;
 
-    this.handler(this.#value);
+    this.onStateChanged(this.#value);
   }
   
   increment() {
@@ -28,12 +28,12 @@ export default class Model {
     else
       this.#value++;
 
-    this.handler(this.#value);
+    this.onStateChanged(this.#value);
   }
 
   // *** binding: model -> controller ***
 
   bindOnStateChange(handler) {
-    this.handler = handler;
+    this.onStateChanged = handler;
   }
 }
