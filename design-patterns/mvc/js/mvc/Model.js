@@ -7,6 +7,8 @@ export default class Model {
 
   set value(value) {
     this.#value = value;
+
+    this.onStateChanged(this.#value);
   }
   
   get value() {
