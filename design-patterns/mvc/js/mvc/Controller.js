@@ -18,7 +18,7 @@ export default class Controller {
     this.model.bindOnStateChange(this.stateChange);
 
     // *** render ***
-    this.stateChange();
+    this.stateChange(this.model.value);
   }
 
   // *** handlers ***
@@ -33,7 +33,7 @@ export default class Controller {
   }
 
   // view
-  stateChange = () => {
-    this.view.setValue(this.model.value);
+  stateChange = (value) => {
+    this.view.setValue(value);
   }
 }
