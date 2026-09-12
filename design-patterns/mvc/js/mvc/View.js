@@ -15,7 +15,7 @@ export default class View {
 
   // *** render ***
 
-  set value(value) {
+  setValue(value) {
     this.value.textContent = value;
   }
 
