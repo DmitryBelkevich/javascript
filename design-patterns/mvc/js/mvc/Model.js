@@ -26,4 +26,10 @@ export default class Model {
     else
       this.#value++;
   }
+
+  // *** binding: model-controller ***
+
+  bindOnStateChange(handler) {
+    console.log("OnStateChange");
+  }
 }
