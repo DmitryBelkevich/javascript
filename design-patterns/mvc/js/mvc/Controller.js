@@ -23,7 +23,7 @@ export default class Controller {
 
   // *** handlers ***
 
-  // view
+  // model
   decrement = () => {
     this.model.decrement();
   }
@@ -32,7 +32,7 @@ export default class Controller {
     this.model.increment();
   }
 
-  // model
+  // view
   stateChange = () => {
     this.view.setValue(this.model.value);
   }
