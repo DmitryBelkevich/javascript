@@ -18,6 +18,8 @@ export default class Model {
       this.#value = 5;
     else
       this.#value--;
+
+    this.handler();
   }
   
   increment() {
@@ -25,6 +27,8 @@ export default class Model {
       this.#value = -5;
     else
       this.#value++;
+
+    this.handler();
   }
 
   // *** binding: model-controller ***
