@@ -14,16 +14,16 @@ export default class Model {
   }
 
   decrement() {
-    this.#value--;
-    
     if (this.#value < -5)
       this.#value = 5;
+
+    this.#value--;
   }
   
   increment() {
-    this.#value++;
-    
     if (this.#value > 5)
       this.#value = -5;
+
+    this.#value++;
   }
 }
