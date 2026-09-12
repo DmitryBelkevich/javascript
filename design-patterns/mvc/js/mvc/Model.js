@@ -19,7 +19,7 @@ export default class Model {
     else
       this.#value--;
 
-    this.handler(999);
+    this.handler(this.#value);
   }
   
   increment() {
@@ -28,7 +28,7 @@ export default class Model {
     else
       this.#value++;
 
-    this.handler(999);
+    this.handler(this.#value);
   }
 
   // *** binding: model-controller ***
