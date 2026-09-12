@@ -36,6 +36,6 @@ export default class Controller {
 
   // model
   stateChange = () => {
-    console.log("Hello World");
+    console.log("state has been changed");
   }
 }
