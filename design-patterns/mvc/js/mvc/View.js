@@ -12,7 +12,23 @@ export default class View {
     document.body.append(this.value_e, this.button1, this.button2);
   }
 
+  // *** render ***
+
   setValue(value) {
     this.value.textContent = value;
+  }
+
+  // *** binding view-controller ***
+
+  bindButton1(handler) {
+    this.button1.addEventListener("click", () => {
+      handler();
+    });
+  }
+
+  bindButton2(handler) {
+    this.button2.addEventListener("click", () => {
+      handler();
+    });
   }
 }
