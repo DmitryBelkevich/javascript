@@ -1,5 +1,6 @@
 export default class View {
   constructor() {
+    // components
     this.value = document.createElement('div');
     
     this.button1 = document.createElement('button');
