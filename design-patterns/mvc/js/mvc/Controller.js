@@ -11,6 +11,7 @@ export default class Controller {
 
     // *** binding controller-view ***
 
+    // bind view -> model
     this.view.bindDecrementButton(this.decrement);
     this.view.bindIncrementButton(this.increment);
 
