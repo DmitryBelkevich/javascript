@@ -34,6 +34,7 @@ export default class Controller {
 
   // view
   stateChange = (value) => {
+    cosole.log(value);
     this.view.setValue(value);
   }
 }
