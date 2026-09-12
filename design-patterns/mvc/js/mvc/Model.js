@@ -5,11 +5,11 @@ export default class Model {
     this.#value = 0;
   }
 
-  set value(value) {console.log("setter");
+  set value(value) {
     this.#value = value;
   }
   
-  get value() {console.log("getter");
+  get value() {
     return this.#value;
   }
 }
