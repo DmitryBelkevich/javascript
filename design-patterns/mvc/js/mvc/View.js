@@ -3,14 +3,14 @@ export default class View {
     // components
     this.value = document.createElement('div');
     
-    this.button1 = document.createElement('button');
-    this.button1.textContent = "-";
+    this.button_decrement = document.createElement('button');
+    this.button_decrement.textContent = "-";
     
-    this.button2 = document.createElement('button');
-    this.button2.textContent = "+";
+    this.button_increment = document.createElement('button');
+    this.button_increment.textContent = "+";
     
     // fill container
-    document.body.append(this.value, this.button1, this.button2);
+    document.body.append(this.value, this.button_decrement, this.button_increment);
   }
 
   // *** render ***
@@ -22,13 +22,13 @@ export default class View {
   // *** binding view-controller ***
 
   bindButton1(handler) {
-    this.button1.addEventListener("click", () => {
+    this.button_decrement.addEventListener("click", () => {
       handler();
     });
   }
 
   bindButton2(handler) {
-    this.button2.addEventListener("click", () => {
+    this.button_increment.addEventListener("click", () => {
       handler();
     });
   }
