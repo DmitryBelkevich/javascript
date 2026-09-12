@@ -2,7 +2,7 @@ export default class Model {
   #value;
   
   constructor() {
-    this.#value = 1;
+    this.#value = 0;
   }
 
   set value(value) {
