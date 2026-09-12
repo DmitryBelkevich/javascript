@@ -15,9 +15,15 @@ export default class Model {
 
   decrement() {
     this.#value--;
+
+    if (this.#value > -5)
+      this.#value = 5;
   }
   
   increment() {
     this.#value++;
+
+    if (this.#value > 5)
+      this.#value = -5;
   }
 }
