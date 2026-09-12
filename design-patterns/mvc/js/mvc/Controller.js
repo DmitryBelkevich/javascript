@@ -26,12 +26,10 @@ export default class Controller {
   // view
   decrement = () => {
     this.model.decrement();
-    this.view.setValue(this.model.value);
   }
 
   increment = () => {
     this.model.increment();
-    this.view.setValue(this.model.value);
   }
 
   // model
