@@ -3,5 +3,7 @@ export default class Model {
   
   constructor() {
     this.#value = 0;
+
+    console.log(this);
   }
 }
