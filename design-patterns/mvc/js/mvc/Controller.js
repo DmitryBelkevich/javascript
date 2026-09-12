@@ -9,6 +9,8 @@ export default class Controller {
     // view
     this.view = new View();
 
+    this.view.setValue(this.model.value);
+
     // *** binding controller-view ***
 
     this.view.bindButton1(this.handler1);
