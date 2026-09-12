@@ -34,6 +34,6 @@ export default class Controller {
 
   // model
   stateChange = () => {
-    console.log("state has been changed");
+    this.view.setValue(this.model.value);
   }
 }
