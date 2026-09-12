@@ -4,10 +4,10 @@ import View from './View.js';
 export default class Controller {
   constructor() {
     // model
-    const model = new Model();
+    this.model = new Model();
 
     // view
-    const view = new View();
+    this.view = new View();
 
     // *** binding controller-view ***
 
